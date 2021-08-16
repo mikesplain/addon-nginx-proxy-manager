@@ -1,4 +1,3 @@
-<<<<<<< HEAD
 certbot-dns-acmedns==0.1.0
 certbot-dns-aliyun==0.38.1
 certbot-dns-cloudflare==1.18.0
