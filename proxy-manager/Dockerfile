@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 COPY requirements.txt /tmp/
 
 # Setup base
-# hadolint ignore=DL3003
+# hadolint ignore=DL3003,DL3018
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
