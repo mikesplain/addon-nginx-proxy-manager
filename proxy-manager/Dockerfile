@@ -9,7 +9,7 @@ SHELL ["/bin/bash", "-o", "pipefail", "-c"]
 COPY requirements.txt /tmp/
 
 # Setup base
-# hadolint ignore=DL3003
+# hadolint ignore=DL3003,DL3018
 RUN \
     apk add --no-cache --virtual .build-dependencies \
         build-base=0.5-r2 \
@@ -29,7 +29,7 @@ RUN \
         mariadb=10.5.12-r0 \
         nginx-mod-stream=1.20.1-r3 \
         nginx=1.20.1-r3 \
-        nodejs=14.17.4-r0 \
+        nodejs # https://pkgs.alpinelinux.org/packages?name=nodejs&branch=edge \
         openssl=1.1.1l-r0 \
         py3-pip=20.3.4-r1 \
         python2=2.7.18-r2 \
